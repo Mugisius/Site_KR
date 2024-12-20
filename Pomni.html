@@ -40,40 +40,32 @@
                 <li>Цвета: Белый, синий, красный</li>
             </ul>
 
-            <div class="buttons2" style="margin-right: 640px;">
-                <button class="add-to-cart" > Добавить в корзину<i class="fas fa-shopping-cart"></i></button>
+            <div class="buttons2">
+                <button class="add-to-cart"> Добавить в корзину<i class="fas fa-shopping-cart"></i></button>
+                <button class="add-to-favorites" data-product-id="pomni-doll" data-product-name="Кукла Помни" data-product-image="images/Pomni.jpg" data-product-url="Pomni.html">
+                    <i class="far fa-heart"></i>
+                </button>
             </div>
         </div>
-
-        <div class="product-image">
-            <img src="images/Pomni.jpg" alt="Кукла Помни">
+        <div class="product-image2">
+            <div class="main-image">
+                <img id="main-img" src="images/Pomni.jpg" alt="Кукла Помни">
+            </div>
+            <div class="thumbnail-images">
+                <img class="thumbnail" src="images/Pomni.jpg" alt="Кукла Помни" onclick="changeImage('images/Pomni.jpg')">
+                <img class="thumbnail" src="images/Pomni_02.jpg" alt="Кукла Помни 2" onclick="changeImage('images/Pomni_02.jpg')">
+                <img class="thumbnail" src="images/Pomni_03.jpg" alt="Кукла Помни 3" onclick="changeImage('images/Pomni_03.jpg')">
+            </div>
         </div>
     </section>
 </main>
+
 
 <footer>
     <p>&copy; 2024 Планета игрушек. Все права защищены.</p>
     <p>Автор сайта - Акинин Иван</p>
 </footer>
-<script>
-    // Получаем все кнопки с классом .add-to-favorites
-    const buttons = document.querySelectorAll('.add-to-favorites');
 
-    // Для каждой кнопки добавляем обработчик клика
-    buttons.forEach(button => {
-        const icon = button.querySelector('i'); // Иконка внутри кнопки
-
-        button.addEventListener('click', () => {
-            if (icon.classList.contains('far', 'fa-heart')) {
-                icon.classList.remove('far', 'fa-heart');
-                icon.classList.add('fas', 'fa-heart');
-            } else {
-                icon.classList.remove('fas', 'fa-heart');
-                icon.classList.add('far', 'fa-heart');
-            }
-        });
-    });
-</script>
 <script src="scripts.js"></script>
 </body>
 </html>

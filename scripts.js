@@ -178,3 +178,10 @@ function addToCart(productId, productName, productImage) {
         alert(`${productName} добавлен в корзину!`);
     }
 }
+
+/*_____Pomni_____*/
+
+function changeImage(imageSrc) {
+    const mainImage = document.getElementById('main-img');
+    mainImage.src = imageSrc;
+}

@@ -490,3 +490,47 @@ body2 {
 body.no-select {
     user-select: none;
 }
+
+/*_____Pomni_____*/
+
+/* Контейнер для изображения */
+.product-image2 {
+    width: 100%;
+    position: relative;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: flex-end; /* Выравнивание изображений по правому краю */
+}
+
+/* Основное изображение */
+.main-image img {
+    width: auto; /* Сохраняем пропорции */
+    height: 500px; /* Фиксированная высота для основного изображения */
+    border-radius: 8px;
+    border: 5px solid #4CAF50;
+}
+
+/* Миниатюры */
+.thumbnail-images {
+    display: flex;
+    flex-direction: row; /* Располагаем миниатюры в строку */
+    margin-top: 10px;
+    gap: 10px;
+    justify-content: flex-end; /* Миниатюры выравниваются по правому краю */
+}
+
+.thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+/* Псевдокласс для миниатюр при наведении */
+.thumbnail:hover {
+    border-color: #4CAF50;
+}
